@@ -11,11 +11,11 @@ This project contains as well an Main Menu.
 Controls 
 
 Movement :
-  * WASD or Arrows
+   WASD or Arrows
 Jump :
-  * Space Bar
+   Space Bar
 Shoot :
-  * Left Mouse Button
+   Left Mouse Button
   
 
 An special thanks to Kenney from the sprites 
