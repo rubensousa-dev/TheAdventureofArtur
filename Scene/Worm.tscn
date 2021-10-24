@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/Animations/worm.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://Scripts/SimpleEnemie.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 5.84407, 6.40985 )
+
+[node name="Worm" type="KinematicBody2D"]
+script = ExtResource( 2 )
+gravityPower = 0
+orientation = 1
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0.0735893, -1.47181 )
+frames = ExtResource( 1 )
+frame = 1
+playing = true
+flip_h = true
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2( -0.167255, 0.71167 )
+shape = SubResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/Animations/player.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://Scripts/PlayerMovement.gd" type="Script" id=3]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 6.31121
+height = 3.99853
+
+[node name="Player" type="KinematicBody2D" groups=[
+"Player",
+]]
+script = ExtResource( 3 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, 8 )
+frames = ExtResource( 1 )
+animation = "idle"
+playing = true
+offset = Vector2( 0, -8 )
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 0.25, 0.25 )
+limit_left = -240
+limit_top = -200
+limit_right = 620
+limit_bottom = 120
+limit_smoothed = true
+smoothing_enabled = true

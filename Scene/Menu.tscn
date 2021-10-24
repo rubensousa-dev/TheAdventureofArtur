@@ -1,0 +1,82 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/Fonts/Font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Assets/Animations/bee.tres" type="SpriteFrames" id=2]
+[ext_resource path="res://Assets/TilemapsGFiles/TileSetMap.tres" type="TileSet" id=3]
+[ext_resource path="res://Assets/Animations/player.tres" type="SpriteFrames" id=4]
+[ext_resource path="res://Scripts/Menu.gd" type="Script" id=5]
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.9967
+margin_top = -1.49829
+margin_right = 2.9967
+margin_bottom = -1.49829
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( 83.5029, 597.562 )
+scale = Vector2( 9.35641, 9.35641 )
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -196609, 13, 0, -262144, 37, 0, -262143, 11, 0, -262142, 13, 0, -262141, 13, 0, -262140, 13, 0, -262139, 11, 0, -262138, 13, 0, -262137, 13, 0, -131073, 13, 0, -196608, 38, 0, -196607, 13, 0, -196606, 13, 0, -196605, 13, 0, -196604, 13, 0, -196603, 13, 0, -196602, 11, 0, -196601, 37, 0, -65537, 13, 0, -131072, 39, 0, -131071, 13, 0, -131070, 13, 0, -131069, 13, 0, -131068, 13, 0, -131067, 13, 0, -131066, 13, 0, -131065, 39, 0, -1, 13, 0, -65536, 41, 0, -65535, 13, 0, -65534, 13, 0, -65533, 13, 0, -65532, 13, 0, -65531, 13, 0, -65530, 13, 0, -65529, 40, 0, 65535, 13, 0, 0, 43, 0, 1, 13, 0, 2, 16, 0, 3, 13, 0, 4, 13, 0, 5, 13, 0, 6, 16, 0, 7, 44, 0 )
+
+[node name="Title" type="Label" parent="."]
+margin_left = 280.041
+margin_top = 187.609
+margin_right = 970.041
+margin_bottom = 263.609
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.419608, 0.278431, 0.278431, 1 )
+text = "THE ADVENTURES OF ARTUR"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Start" type="Button" parent="."]
+margin_left = 493.636
+margin_top = 345.937
+margin_right = 733.636
+margin_bottom = 405.937
+custom_fonts/font = ExtResource( 1 )
+text = "Start"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" type="Button" parent="."]
+margin_left = 493.636
+margin_top = 442.937
+margin_right = 733.636
+margin_bottom = 502.937
+custom_fonts/font = ExtResource( 1 )
+text = "Exit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bee" type="AnimatedSprite" parent="."]
+position = Vector2( 938.46, 397.321 )
+scale = Vector2( 7.25039, 7.25039 )
+frames = ExtResource( 2 )
+playing = true
+flip_h = true
+
+[node name="Artur" type="AnimatedSprite" parent="."]
+position = Vector2( 358.362, 663.122 )
+scale = Vector2( 7.25039, 7.25039 )
+frames = ExtResource( 4 )
+animation = "walk"
+frame = 1
+speed_scale = 0.5
+playing = true
+
+[connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]
