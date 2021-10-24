@@ -5,8 +5,10 @@
 Description:
 
 Simple 2D SideScroller game made with Godot for a school project where we apply some basic mechanics like the hability of the player Walk, Run, Jump and Shoot. 
-<p>He also collects coins and kills enemies.</p>
-<p>This project contains as well an Main Menu.</p>
+<br>
+He also collects coins and kills enemies.
+<br>
+This project contains as well an Main Menu.
 
 Controls 
 
