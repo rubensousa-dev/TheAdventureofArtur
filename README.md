@@ -11,17 +11,17 @@ This project contains as well an Main Menu.
 Controls 
 
 Movement :
-   WASD or Arrows
+   <p>WASD or Arrows</p>
 Jump :
-   Space Bar
+   <p>Space Bar</p>
 Shoot :
-   Left Mouse Button
+  <p> Left Mouse Button</p>
   
 
 An special thanks to Kenney from the sprites 
 
 Material Use :
 
-  Sprites : https://www.kenney.nl/assets/pixel-line-platformer
-  Coin Animation : https://opengameart.org/content/rotating-coin
-  Font : https://fonts.google.com/specimen/Press+Start+2P
+  <p>Sprites : https://www.kenney.nl/assets/pixel-line-platformer</p>
+  <p>Coin Animation : https://opengameart.org/content/rotating-coin</p>
+  <p>Font : https://fonts.google.com/specimen/Press+Start+2P</p>
